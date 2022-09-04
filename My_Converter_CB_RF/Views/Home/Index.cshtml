@@ -1,0 +1,31 @@
+﻿@model MyConverter
+@{
+    decimal priceRUB = 300;
+}
+<div>
+    Цена товара в Российских рублях: @priceRUB руб.
+    <div>
+        @($"Курс доллара: {Model.USD}. Цена в долларах {Decimal.Round(Model.ConvertToUSD(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс белорусского рубля: {Model.BYN}. Цена в бел. рублях {Decimal.Round(Model.ConvertToBYN(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс юаня: {Model.CNY}. Цена в юанях {Decimal.Round(Model.ConvertToCNY(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс евро: {Model.EUR}. Цена в евро {Decimal.Round(Model.ConvertToEUR(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс фунта: {Model.GBP}. Цена в фунтах {Decimal.Round(Model.ConvertToGBP(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс иена: {Model.JPY}. Цена в иенах {Decimal.Round(Model.ConvertToJPY(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс тенге: {Model.KZT}. Цена в тенге {Decimal.Round(Model.ConvertToKZT(priceRUB), 2)}")
+    </div>
+    <div>
+        @($"Курс гривны: {Model.UAH}. Цена в гривнах {Decimal.Round(Model.ConvertToUAH(priceRUB), 2)}")
+    </div>
+</div>
